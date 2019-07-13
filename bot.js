@@ -20,7 +20,7 @@ client.user.setGame("~", "https://www.twitch.tv/idk");
 
 client.on("message", message => {
 //if(message.content.startsWith(prefix + "avatar")){
-if(message.content.startsWith("av")){
+if (message.content === 'av') {
 //if(!message.guild.member(message.author).hasPermission("8")) return message.reply("You don't have Permission").then(msg => msg.delete(1000));
 if(message.author.bot || message.channel.type == "dm") return;
 var args = message.content.split(" ")[1];
