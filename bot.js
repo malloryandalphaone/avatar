@@ -13,7 +13,7 @@ if (x) x.join();
 
 client.on("ready", () => {
 client.user.setStatus('offline');
-client.user.setGame("~", "https://www.twitch.tv/idk");
+client.user.setGame("خدآمة تجيد آلطباخ .", "https://www.twitch.tv/idk");
   console.log(`Logged in as ${client.user.tag}!`);
   //client.user.setActivity("Voltes System",{type: 'LISTENING'});
 });
