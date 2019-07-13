@@ -19,9 +19,8 @@ client.user.setGame("مخصي قابل للتزآوج .", "https://www.twitch.tv
 });
 
 client.on("message", message => {
-if(message.content.startsWith(prefix + "vat")){
-//if (message.content === 'av') {
-if(!message.guild.member(message.author).hasPermission("1")) return message.reply("You don't have Permission").then(msg => msg.delete(1000));
+if(message.content.startsWith(prefix + "avat")){
+if(!message.guild.member(message.author).hasPermission("8")) return message.reply("You don't have Permission").then(msg => msg.delete(1000));
 if(message.author.bot || message.channel.type == "dm") return;
 var args = message.content.split(" ")[1];
 var avt = args || message.author.id;
@@ -32,7 +31,7 @@ let avtEmbed = new Discord.RichEmbed()
 .setColor("#36393e")
 .setAuthor(`${avt.username}'s Avatar`, message.author.avatarURL)
 .setImage(avt.avatarURL)
-.setFooter(message.guild.iconURL)
+.setFooter('0001.', message.guild.iconURL)
 .setTimestamp()
 message.channel.send(avtEmbed);
 })
