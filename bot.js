@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-//var prefix = "#"
+var prefix = "a"
 const fs = require("fs"); 
 const moment = require("moment");  
 const pretty = require("pretty-ms");
@@ -19,8 +19,8 @@ client.user.setGame("خدآمة تجيد آلطباخ .", "https://www.twitch.tv
 });
 
 client.on("message", message => {
-//if(message.content.startsWith(prefix + "avatar")){
-if (message.content === 'av') {
+if(message.content.startsWith(prefix + "v")){
+//if (message.content === 'av') {
 //if(!message.guild.member(message.author).hasPermission("8")) return message.reply("You don't have Permission").then(msg => msg.delete(1000));
 if(message.author.bot || message.channel.type == "dm") return;
 var args = message.content.split(" ")[1];
